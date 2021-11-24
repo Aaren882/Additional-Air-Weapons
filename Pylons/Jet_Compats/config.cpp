@@ -22,7 +22,6 @@ class CfgVehicles
 	{
 		class Components;
 	};
-	//Fighter_01
 	#include "Fighter_01.hpp"
 	#include "CAS_01.hpp"
 };

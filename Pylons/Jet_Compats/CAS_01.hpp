@@ -1,8 +1,8 @@
 class Plane_CAS_01_base_F: Plane_Base_F
 {
-	class Components: Components{};
+	class Components;
 };
-class Plane_CAS_01_dynamicLoadout_base_F: Plane_Base_F
+class Plane_CAS_01_dynamicLoadout_base_F: Plane_CAS_01_base_F
 {
 	class Components: Components
 	{
@@ -12,15 +12,17 @@ class Plane_CAS_01_dynamicLoadout_base_F: Plane_Base_F
 			{
 				class Pylons1
 				{
-					hardpoints[] += 
+					hardpoints[] = 
 					{
+						"B_MISSILE_PYLON",
+						"B_BOMB_PYLON",
 						"B_USAF_AIM9X",//AA
 						"B_USAF_AIM9M",
 						"B_AIM9M_DUAL_RAIL",
 						"B_AIM9X_DUAL_RAIL",
 						"B_BOMB_FFAR7",//Rocket
 						"B_BOMB_FFAR21",
-						"B_BOMB_APKWS7",
+						"B_BOMB_APKWS7"/*,
 						"B_BOMB_GBU12",//Bomb
 						"B_BOMB_GBU24",
 						"B_BOMB_GBU28",
@@ -44,13 +46,15 @@ class Plane_CAS_01_dynamicLoadout_base_F: Plane_Base_F
 						"B_BOMB_MK84",
 						"B_BOMB_MK84AIR",
 						"B_USAF_AARGMER",
-						"B_USAF_AARGMER_2"
+						"B_USAF_AARGMER_2"*/
 					};
 				};
-				/*class Pylons2: Pylons1
+				class Pylons2: Pylons1
 				{
 					hardpoints[] += 
 					{
+						"B_MISSILE_PYLON",
+						"B_BOMB_PYLON",
 						"B_MISSILE_AGM65D",//AG
 						"B_MISSILE_AGM65E",
 						"B_MISSILE_AGM65K"
@@ -60,6 +64,8 @@ class Plane_CAS_01_dynamicLoadout_base_F: Plane_Base_F
 				{
 					hardpoints[] += 
 					{
+						"B_MISSILE_PYLON",
+						"B_BOMB_PYLON",
 						"B_MISSILE_AGM65D",//AG
 						"B_MISSILE_2AGM65D",
 						"B_MISSILE_3AGM65D",
@@ -102,6 +108,8 @@ class Plane_CAS_01_dynamicLoadout_base_F: Plane_Base_F
 				{
 					hardpoints[] += 
 					{
+						"B_MISSILE_PYLON",
+						"B_BOMB_PYLON",
 						"B_MISSILE_AGM65D",//AG
 						"B_MISSILE_2AGM65D",
 						"B_MISSILE_3AGM65D",
@@ -142,8 +150,10 @@ class Plane_CAS_01_dynamicLoadout_base_F: Plane_Base_F
 				};
 				class Pylons5: Pylons1
 				{
-					hardpoints[] += 
+					hardpoints[] = 
 					{
+						"B_MISSILE_PYLON",
+						"B_BOMB_PYLON",
 						"B_MISSILE_AGM65D",//AG
 						"B_MISSILE_2AGM65D",
 						"B_MISSILE_3AGM65D",
@@ -186,7 +196,7 @@ class Plane_CAS_01_dynamicLoadout_base_F: Plane_Base_F
 				class Pylons7: Pylons4{};
 				class Pylons8: Pylons3{};
 				class Pylons9: Pylons2{};
-				class Pylons10: Pylons1{};*/
+				class Pylons10: Pylons1{};
 			};
 		};
 	};
