@@ -7,7 +7,7 @@ class cmDispenser
 	priority=1;
 	attachment="VaECM_mag_H";
 	maxweight=800;
-	UIposition[]={0.33000001,0};
+	UIposition[]={0.6,0.05};
 };
 class Illuminate
 {
@@ -18,5 +18,5 @@ class Illuminate
 	priority=1;
 	attachment="VaIUT_mag";
 	maxweight=800;
-	UIposition[]={0.6,0.2};
+	UIposition[]={0.6,0.1};
 };
