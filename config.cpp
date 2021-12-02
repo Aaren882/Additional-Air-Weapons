@@ -20,3 +20,4 @@ class CfgPatches
 #include "Sounds\Sounds.hpp"
 #include "Curator\Supports.hpp"
 #include "Effects.hpp"
+#include "CfgFunctions.hpp"
