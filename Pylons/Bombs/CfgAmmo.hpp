@@ -13,7 +13,7 @@ class CfgAmmo
 	class SubmunitionBase;
 	class BombCore;
 	//Effect
-	class AWS_Cluster_Effect: BombCore
+	class AAW_Cluster_Effect: BombCore
 	{
 		model = "\A3\weapons_f\empty";
 		proxyShape = "\A3\weapons_f\empty";
@@ -24,14 +24,14 @@ class CfgAmmo
 		simulation = "shotGrenade";
 		muzzleEffect = "";
 		CraterEffects = "EmptyEffect";
-		explosionEffects = "EmptyEffect";
+		explosionEffects = "AAW_Side_Busrt_Effect";
 		
 		deflectionSlowDown = 0;
 		explosionTime = 0.01;
 		
 		SoundSetExplosion[]=
 		{
-			"AWS_Shell_Explosion_SoundSet"
+			"AAW_Shell_Explosion_SoundSet"
 		};
 	};
 	//Clusters
@@ -114,12 +114,12 @@ class CfgAmmo
 		////////////////////////////////////////////
 		#include "Components.hpp"
 	};
-	class PH_Cluster_Effect: AWS_Cluster_Effect
+	class PH_Cluster_Effect: AAW_Cluster_Effect
 	{
 		explosionEffects = "explosionEffects";
 		SoundSetExplosion[]=
 		{
-			"AWS_SFW_Explosion_SoundSet"
+			"AAW_SFW_Explosion_SoundSet"
 		};
 	};
 	class PH_Cluster_Mother: SubmunitionBase
@@ -132,7 +132,7 @@ class CfgAmmo
 		deleteParentWhenTriggered=1;
 		submunitionConeType[] = {"poissondisc",8};
 		submunitionDirectionType = "SubmunitionModelDirection";
-		EffectFly = "AWS_Sound_SFW_Effect";
+		EffectFly = "AAW_Sound_SFW_Effect";
 	};
 	class ShellBase;
 	class PH_Cluster_AP: BulletBase
@@ -173,7 +173,7 @@ class CfgAmmo
 		simulation = "shotMissile";
 		triggerDistance = 250;
 		submunitionAmmo[] = {"Cluster_01_DS_Mother",1};
-		submunitionConeAngle = 5;
+		submunitionConeAngle = 10;
 		submunitionConeType[] = {"randomcenter",3};
 	};
 	class BombCluster_01_AP_F: BombCluster_01_DS_F

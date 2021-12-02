@@ -233,6 +233,7 @@ class CfgAmmo
 	};
 	class R_230mm_WP: R_230mm_Cluster
 	{
+		triggerDistance = 150;
 		submunitionAmmo[] = {"Sh_82mm_WP_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"randomcenter",1};
@@ -252,6 +253,7 @@ class CfgAmmo
 	};
 	class R_230mm_NP: R_230mm_Cluster
 	{
+		triggerDistance = 150;
 		submunitionAmmo[] = {"R_230mm_NP_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"randomcenter",1};

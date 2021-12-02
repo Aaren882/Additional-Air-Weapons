@@ -14,7 +14,7 @@ class CfgPatches
 		requiredVersion=0.1;
 	};
 };
-
+class Eventhandlers;
 class CfgVehicles
 {
 	class Plane;

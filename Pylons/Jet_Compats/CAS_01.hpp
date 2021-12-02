@@ -1,6 +1,14 @@
 class Plane_CAS_01_base_F: Plane_Base_F
 {
+	#include "UserActions\UserActions.hpp"
 	class Components;
+	class Eventhandlers: Eventhandlers
+	{
+		class USAF_Compat
+		{
+			fired = "_this spawn AAW_fnc_USAF_Compat";
+		};
+	};
 };
 class Plane_CAS_01_dynamicLoadout_base_F: Plane_CAS_01_base_F
 {

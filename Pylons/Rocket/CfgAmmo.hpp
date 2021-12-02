@@ -47,7 +47,7 @@ class CfgAmmo
 		submunitionParentSpeedCoef = 0.0;
 		submunitionInitSpeed = 300;
 		submunitionConeAngle = 1;
-		submunitionAmmo[] = {"AWS_Flare_Mother",1};
+		submunitionAmmo[] = {"AAW_Flare_Mother",1};
 		submunitionConeType[] = {"randomcenter",1};
 		weaponLockSystem = "4 + 16";
 		aiAmmoUsageFlags = "4";
@@ -143,7 +143,7 @@ class CfgAmmo
 		explosionEffects = "WPSmokeBurst";
 		CraterEffects = "WP_Crater";
 		EffectsFire = "EmptyEffect";
-		effectsMissile = "AWS_WP_Effect";
+		effectsMissile = "AAW_WP_Effect";
 		hit = 70;
 		indirectHit = 17;
 		indirectHitRange = 10;
@@ -161,7 +161,7 @@ class CfgAmmo
 	{
 		timeToLive = 0.1;
 		airFriction = 4;
-		explosionEffects = "AWS_Side_Busrt_Effect";
+		explosionEffects = "AAW_Side_Busrt_Effect";
 	};
 	class RK_Cluster_NP: MissileBase
 	{
@@ -177,8 +177,8 @@ class CfgAmmo
 		indirectHitRange = 8;
 		timeToLive = 20;
 		explosive = 0.8;
-		ExplosionEffects = "AWS_NP_Explosion";
-		CraterEffects = "AWS_NPSmokeBurst";
+		ExplosionEffects = "AAW_NP_Explosion";
+		CraterEffects = "AAW_NPSmokeBurst";
 		audibleFire = 20;
 		SoundSetExplosion[] = {""};
 	};
@@ -190,7 +190,7 @@ class CfgAmmo
 		triggerDistance = 50;
 		submunitionInitSpeed =50;
 		simulation = "shotMissile";
-		submunitionAmmo[] = {"AWS_Cluster_RK_Mother",1};
+		submunitionAmmo[] = {"AAW_Cluster_RK_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"poissonDisc",1};
 	};
@@ -200,7 +200,7 @@ class CfgAmmo
 		simulation = "shotMissile";
 		triggerDistance = 50;
 		submunitionInitSpeed =50;
-		submunitionAmmo[] = {"AWS_APM_RK_Mother",1};
+		submunitionAmmo[] = {"AAW_APM_RK_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"poissonDisc",1};
 	};
@@ -210,7 +210,7 @@ class CfgAmmo
 		simulation = "shotMissile";
 		triggerDistance = 50;
 		submunitionInitSpeed =50;
-		submunitionAmmo[] = {"AWS_ATM_RK_Mother",1};
+		submunitionAmmo[] = {"AAW_ATM_RK_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"poissonDisc",1};
 	};
@@ -220,7 +220,7 @@ class CfgAmmo
 		simulation = "shotMissile";
 		triggerDistance = 50;
 		submunitionInitSpeed =50;
-		submunitionAmmo[] = {"AWS_XM_RK_Mother",1};
+		submunitionAmmo[] = {"AAW_XM_RK_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"poissonDisc",1};
 	};
@@ -228,7 +228,7 @@ class CfgAmmo
 	{
 		warheadName = "Smoke";
 		simulation = "shotMissile";
-		submunitionAmmo[] = {"AWS_SW_RK_Mother",1};
+		submunitionAmmo[] = {"AAW_SW_RK_Mother",1};
 		submunitionConeType[] = {"randomcenter",1};
 		submunitionConeAngle = 1;
 		triggerDistance = 50;
@@ -243,7 +243,7 @@ class CfgAmmo
 		simulation = "shotMissile";
 		triggerDistance = 150;
 		submunitionInitSpeed =50;
-		submunitionAmmo[] = {"AWS_WP_RK_Mother",1};
+		submunitionAmmo[] = {"AAW_WP_RK_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"randomcenter",1};
 	};
@@ -253,7 +253,7 @@ class CfgAmmo
 		simulation = "shotMissile";
 		triggerDistance = 150;
 		submunitionInitSpeed =50;
-		submunitionAmmo[] = {"AWS_NP_RK_Mother",1};
+		submunitionAmmo[] = {"AAW_NP_RK_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"randomcenter",1};
 	};
