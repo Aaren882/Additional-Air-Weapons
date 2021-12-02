@@ -10,25 +10,37 @@ class CfgSFX
 	};
 };
 class CounterMeasureChaff;
-class AWS_WPTrailEffect_Sec
+class AAW_WPTrailEffect_Sec
 {
-	class Trails
+	/*class Trails
 	{
 		simulation="particles";
-		type="AWS_WPTrailEffect";
+		type="AAW_WPTrailEffect";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=6;
+	};*/
+	class Light
+	{
+		simulation="light";
+		type="AAW_WP_Burst_Trail_Light";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
 		lifeTime=6;
 	};
-	class Light
+};
+class AAW_Side_Busrt_Effect
+{
+	class AAW_Side_Busrt_Effect
 	{
-		simulation="light";
-		type="AWS_WP_Burst_Trail_Light";
+		simulation="particles";
+		type="AAW_WP_Brust_Side_Effect";
 		position[]={0,0,0};
-		intensity=1;
 		interval=1;
-		lifeTime=6;
+		intensity=1;
+		lifeTime=0.2;
 	};
 };
 class WPSmokeBurst
@@ -36,23 +48,11 @@ class WPSmokeBurst
 	class Sparks
 	{
 		simulation="particles";
-		type="AWS_WP_Brust_Spark";
+		type="AAW_WP_Brust_Spark";
 		position[]={0,0,0};
 		interval=1;
 		intensity=1;
 		lifeTime=6;
-	};
-};
-class AWS_Side_Busrt_Effect
-{
-	class AWS_Side_Busrt_Effect
-	{
-		simulation="particles";
-		type="AWS_WP_Brust_Side_Effect";
-		position[]={0,0,0};
-		interval=1;
-		intensity=1;
-		lifeTime=3;
 	};
 };
 //WP Crater
@@ -69,16 +69,7 @@ class WP_Crater
 	class Light
 	{
 		simulation="light";
-		type="AWS_WP_Burst_Light";
-		position[]={0,0,0};
-		intensity=1;
-		interval=1;
-		lifeTime=10;
-	};
-	class Refract
-	{
-		simulation="particles";
-		type="AWS_WPRefract";
+		type="AAW_WP_Burst_Light";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
@@ -87,7 +78,7 @@ class WP_Crater
 	class Explosion
 	{
 		simulation="particles";
-		type="AWS_Explo_WPSmoke";
+		type="AAW_Explo_WPSmoke";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
@@ -95,12 +86,12 @@ class WP_Crater
 	};
 };
 //Fly
-class AWS_WP_Effect
+class AAW_WP_Effect
 {
 	class Light1
 	{
 		simulation="light";
-		type="AWS_WP_Light";
+		type="AAW_WP_Light";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
@@ -109,7 +100,7 @@ class AWS_WP_Effect
 	class Trails
 	{
 		simulation="particles";
-		type="AWS_WPTrails";
+		type="AAW_WPTrails";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
@@ -117,7 +108,7 @@ class AWS_WP_Effect
 	};
 };
 //Napalm
-class AWS_NPTrailEffect_Sec
+class AAW_NPTrailEffect_Sec
 {
 	class Sound
 	{
@@ -130,7 +121,7 @@ class AWS_NPTrailEffect_Sec
 	class Trails
 	{
 		simulation="particles";
-		type="AWS_NPFire_Ball";
+		type="AAW_NPFire_Ball";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
@@ -148,14 +139,14 @@ class AWS_NPTrailEffect_Sec
 	class Light
 	{
 		simulation="light";
-		type="AWS_NP_Light";
+		type="AAW_NP_Light";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
 		lifeTime=20;
 	};
 };
-class AWS_NPSmokeBurst
+class AAW_NPSmokeBurst
 {
 	class NapalmFireLight
 	{
@@ -177,7 +168,7 @@ class AWS_NPSmokeBurst
 	class Refract
 	{
 		simulation="particles";
-		type="AWS_NPRefract";
+		type="AAW_NPRefract";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
@@ -211,19 +202,19 @@ class AWS_NPSmokeBurst
 		lifeTime=20;
 	};
 };
-class AWS_NP_Explosion
+class AAW_NP_Explosion
 {
 	class NapalmFireBall
 	{
 		simulation="particles";
-		type="AWS_NP_Brust_Spark";
+		type="AAW_NP_Brust_Spark";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
 		lifeTime=20;
 	};
 };
-class AWS_SFW_EffectFly
+class AAW_SFW_EffectFly
 {
 	class ClusterFlyLight
 	{
@@ -234,10 +225,10 @@ class AWS_SFW_EffectFly
 		intensity=1;
 		interval=1;
 	};
-	class AWS_SFW_Particle
+	class AAW_SFW_Particle
 	{
 		simulation="particles";
-		type="AWS_SFW_Particle";
+		type="AAW_SFW_Particle";
 		position[]={0,0,0};
 		lifeTime=1;
 		intensity=1;
@@ -265,36 +256,36 @@ class ArtilleryTrails
 		enabled="flyTime interpolate [0,0.15,1,-1]";
 	};
 };
-class AWS_Sound_SFW_Effect
+class AAW_Sound_SFW_Effect
 {
-	class AWS_Sound_Effect
+	class AAW_Sound_Effect
 	{
 		simulation="particles";
-		type="AWS_Sound_Effect_SFW";
+		type="AAW_Sound_Effect_SFW";
 		position[]={0,0,0};
 		intensity=1;
 		interval=0;
 		lifeTime=0.1;
 	};
 };
-class AWS_Sound_Shell_Effect
+class AAW_Sound_Shell_Effect
 {
-	class AWS_Sound_Effect
+	class AAW_Sound_Effect
 	{
 		simulation="particles";
-		type="AWS_Sound_Effect_Shell";
+		type="AAW_Sound_Effect_Shell";
 		position[]={0,0,0};
 		intensity=1;
 		interval=0;
 		lifeTime=0.1;
 	};
 };
-class AWS_CM_Flare
+class AAW_CM_Flare
 {
 	class Trail1
 	{
 		simulation="particles";
-		type="AWS_CMTrails";
+		type="AAW_CMTrails";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
@@ -303,7 +294,7 @@ class AWS_CM_Flare
 	class Light1
 	{
 		simulation = "light";
-		type="AWS_CM_Flare";
+		type="AAW_CM_Flare";
 		position[] = {0,0.5,0};
 		intensity = 1;
 		interval = 1;
@@ -315,7 +306,7 @@ class CfgCloudlets
 	class Default;
 	class ClusterExplosion;
 	class SmokeShellWhiteSmall;
-	class AWS_SFW_Particle: ClusterExplosion
+	class AAW_SFW_Particle: ClusterExplosion
 	{
 		interval=0.01;
 		moveVelocity[]={0,-1,0};
@@ -329,7 +320,7 @@ class CfgCloudlets
 		randomDirectionIntensity=0;
 		lifeTimeVar=1.5;
 	};
-	class AWS_Sound_Effect_Shell: ClusterExplosion
+	class AAW_Sound_Effect_Shell: ClusterExplosion
 	{
 		
 		color[]={{1,1,1,0}};
@@ -337,20 +328,20 @@ class CfgCloudlets
 		//Script
 		beforeDestroyScript="MG8\AdtionRks\Scripts\ShellEffect.sqf";
 	};
-	class AWS_Sound_Effect_SFW: AWS_Sound_Effect_Shell
+	class AAW_Sound_Effect_SFW: AAW_Sound_Effect_Shell
 	{
 		//Script
 		beforeDestroyScript="MG8\AdtionRks\Scripts\SFWEffect.sqf";
 	};
-	class AWS_SmokeShellWhite: SmokeShellWhiteSmall
+	class AAW_SmokeShellWhite: SmokeShellWhiteSmall
 	{
 		rubbing=1;
 	};
 	class WPTrails;
 	class WPCloud;
-	class AWS_WPTrails: Default
+	class AAW_WPTrails: Default
 	{
-		interval=0.01;
+		interval=0.006;
 		particleShape="\A3\Data_F\ParticleEffects\Universal\Universal";
 		particleFSNtieth=16;
 		particleFSIndex=12;
@@ -358,29 +349,29 @@ class CfgCloudlets
 		particleFSLoop=0;
 		particleType="Billboard";
 		animationName="";
-		animationSpeed[]={500};
+		animationSpeed[]={1000};
 		timerPeriod=0;
-		lifeTime=10;
-		position[]={0,0,0};
+		lifeTime=5;
+		position[]={0,0,1};
 		moveVelocity[]={0,0,0};
 		rotationVelocity=0;
 		weight=1.25;
 		volume=1;
 		rubbing=2;
-		size[]={0.6,1.5,1.5,1.5};
+		size[]={1,2.5,3.6};
 		color[]=
 		{
-			{0.7,0.8,1,0.2},
+			{0.7,0.8,1,0.8},
 			{0.7,0.8,1,0.5},
 			{0.7,0.8,1,0.05},
 			{0.7,0.8,1,0.01},
 			{0.7,0.8,1,0}
 		};
-		lifeTimeVar=4;
-		positionVar[]={0.1,0.1,0.1};
-		positionVarConst[]={0.1,0,0.1};
-		MoveVelocityVar[]={0.2,0,0.2};
-		sizeVar=0.2;
+		lifeTimeVar=1;
+		positionVar[]={0,0,0};
+		positionVarConst[]={0,0,0};
+		MoveVelocityVar[]={0,0,0};
+		sizeVar=0.1;
 		MoveVelocityVarConst[]={0,0,0};
 		randomDirectionPeriod=0;
 		randomDirectionIntensity=0;
@@ -460,7 +451,7 @@ class CfgCloudlets
 		rotationVelocity=0;
 		rotationVelocityVar=0.1;
 	};
-	class AWS_NPRefract: NPSmoke_Up
+	class AAW_NPRefract: NPSmoke_Up
 	{
 		particleShape="\A3\data_f\ParticleEffects\Universal\Refract";
 		particleFSNtieth=1;
@@ -491,9 +482,11 @@ class CfgCloudlets
 		rotationVelocityVar=20;
 		sizeVar=0.03;
 	};
-	class AWS_WPRefract: AWS_NPRefract
+	class AAW_WPRefract: AAW_NPRefract
 	{
-		size[]={3,4,6};
+		interval=1;
+		moveVelocity[]={0,0.25,0};
+		size[]={0.5,2};
 	};
 	//Napalm Explosion
 	class NP_Fire_Explo: Default
@@ -535,7 +528,7 @@ class CfgCloudlets
 	};
 	
 	//Explosion
-	class AWS_Explo_WP: WPCloud
+	class AAW_Explo_WP: WPCloud
 	{
 		interval=0.1;
 		lifeTime=5;
@@ -565,7 +558,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0.2;
 		randomDirectionIntensityVar=0.1;
 	};
-	class AWS_Explo_WPSmoke: AWS_Explo_WP
+	class AAW_Explo_WPSmoke: AAW_Explo_WP
 	{
 		interval=0.1;
 		lifeTime=6;
@@ -584,7 +577,7 @@ class CfgCloudlets
 		MoveVelocityVar[]={0.5,0.75,0.5};
 	};
 	
-	class AWS_WPTrailEffect: WPTrailEffect
+	class AAW_WPTrailEffect: WPTrailEffect
 	{
 		interval=0.05;
 		lifeTime=3;
@@ -604,7 +597,7 @@ class CfgCloudlets
 	};
 	//Sparks
 	class ExpSparks1;
-	class AWS_WP_Brust_Spark: ExpSparks1
+	class AAW_WP_Brust_Spark: ExpSparks1
 	{
 		interval=0.2;
 		particleShape="\A3\data_f\ParticleEffects\Universal\Universal";
@@ -647,19 +640,57 @@ class CfgCloudlets
 		{
 			{10000,6000,1600,0.5}
 		};
-		particleEffects="AWS_WPTrailEffect_Sec";
+		particleEffects="AAW_WPTrailEffect_Sec";
 	};
-	class AWS_WP_Brust_Side_Effect: AWS_WP_Brust_Spark
+	class AAW_WP_Brust_Side_Effect: AAW_WP_Brust_Spark
 	{
-		interval=0.1;
-		moveVelocity[]={0,-3,0};
-		MoveVelocityVar[]={3,1,3};
-		lifeTime=4;
-		lifeTimeVar=1.5;
+		particleShape = "\A3\data_f\ParticleEffects\Universal\Smoke";
+		particleFSNtieth = 1;
+		particleFSIndex = 0;
+		particleFSFrameCount = 1;
+		particleFSLoop = 0;
+		particleType = "Billboard";
+		
+		animationSpeed[] = {-2};
+		size[]={0.1};
+		sizeVar=0.5;
+		interval = 0.004;
+		rubbing=0.15;
+		moveVelocity[]={"(inDirX  / 2) * 1000","(inDirX  / 2)","(inDirX  / 2) * 1000"};
+		moveVelocityVar[] = {1.5,1.5,1.5};
+		
+		position[]={0,0,5};
+		positionVar[]={1,1,1};
+		
+		angleVar = 360;
+		
+		color[]=
+		{
+			{0.8,0.6,0.16,-1},
+			{0.8,0.6,0.16,0}
+		};
+		
+		colorVar[] = {0.05,0.05,0.05,0};
+		
+		rotationVelocity = 1;
+		lifeTime=2;
+		lifeTimeVar=2;
+		
+		randomDirectionPeriod=0.2;
+		randomDirectionIntensity=0.2;
+		
+		weight=2;
+		volume=1.5;
+		
+		emissiveColor[]=
+		{
+			{10000,6000,1600,0.5}
+		};
+		particleEffects="AAW_WPTrailEffect_Sec";
 	};
 	
 	//Napalm
-	class AWS_NP_Brust_Spark: AWS_WP_Brust_Spark
+	class AAW_NP_Brust_Spark: AAW_WP_Brust_Spark
 	{
 		particleShape = "\A3\data_f\ParticleEffects\Shard\shard.p3d";
 		particleFSNtieth = 1;
@@ -687,10 +718,10 @@ class CfgCloudlets
 		moveVelocity[]={0,6,0};
 		MoveVelocityVar[]={10,8,10};
 		
-		particleEffects="AWS_NPTrailEffect_Sec";
+		particleEffects="AAW_NPTrailEffect_Sec";
 	};
 	class ObjectDestructionFire1;
-	class AWS_NPFire_Ball: ObjectDestructionFire1
+	class AAW_NPFire_Ball: ObjectDestructionFire1
 	{
 		interval=0.1;
 		
@@ -703,7 +734,7 @@ class CfgCloudlets
 		lifeTime=1.5;
 		size[]={0.5,0.25,0};
 	};
-	class NPFireBallSmoke: AWS_WPTrailEffect
+	class NPFireBallSmoke: AAW_WPTrailEffect
 	{
 		interval=0.1;
 		
@@ -720,7 +751,7 @@ class CfgCloudlets
 		};
 		colorVar[] = {0,0,0,0};
 	};
-	class AWS_CMTrails: AWS_WPTrails
+	class AAW_CMTrails: AAW_WPTrails
 	{
 		rubbing=4;
 		lifeTime=2;
@@ -765,7 +796,7 @@ class CfgLights
 		};
 		position[]={0,1.5,0};
 	};
-	class AWS_WP_Light
+	class AAW_WP_Light
 	{
 		color[]={1,0.58,0.16};
 		ambient[]={1,0.58,0.16};
@@ -788,11 +819,11 @@ class CfgLights
 			hardLimitEnd=1500;
 		};*/
 	};
-	class AWS_NP_Light: AWS_WP_Light
+	class AAW_NP_Light: AAW_WP_Light
 	{
 		flareSize=0.5;
 	};
-	class AWS_WP_Explo_Light
+	class AAW_WP_Explo_Light
 	{
 		color[]={1,0.58,0.16};
 		ambient[]={1,0.58,0.16};
@@ -806,21 +837,21 @@ class CfgLights
 		flareMaxDistance=1000;
 		position[]={0,0,0};
 	};
-	class AWS_WP_Burst_Light: AWS_WP_Light
+	class AAW_WP_Burst_Light: AAW_WP_Light
 	{
 		flareSize=1;
 		flareMaxDistance=500;
 		intensity=10000;
 		position[]={0,0,0};
 	};
-	class AWS_WP_Burst_Trail_Light: AWS_WP_Burst_Light
+	class AAW_WP_Burst_Trail_Light: AAW_WP_Burst_Light
 	{
 		intensity=8000;
 		flareSize=1;
 	};
 	
 	//Flare
-	class AWS_CM_Flare
+	class AAW_CM_Flare
 	{
 		color[]={0.5,0.5,0.5};
 		ambient[]={0.5,0.5,0.5};
