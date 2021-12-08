@@ -230,6 +230,7 @@ class CfgAmmo
 		submunitionAmmo[] = {"Sh_82mm_WP_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"randomcenter",1};
+		triggerSpeedCoef[] = {0.2,0.5,0.8,1};
 	};
 	class R_230mm_WP: R_230mm_Cluster
 	{

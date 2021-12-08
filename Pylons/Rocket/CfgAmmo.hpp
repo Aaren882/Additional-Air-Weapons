@@ -140,10 +140,10 @@ class CfgAmmo
 		maxSpeed = 100;
 		deflecting = 40;
 		airFriction = 2;
-		explosionEffects = "WPSmokeBurst";
-		CraterEffects = "WP_Crater";
+		explosionEffects = "AAW_WP_Explosion_Smoke";
+		CraterEffects = "AAW_WP_Crater";
 		EffectsFire = "EmptyEffect";
-		effectsMissile = "AAW_WP_Effect";
+		effectsMissile = "AAW_WP_Fly_Effect";
 		hit = 70;
 		indirectHit = 17;
 		indirectHitRange = 10;
@@ -156,12 +156,6 @@ class CfgAmmo
 		class HitEffects
 		{
 		};
-	};
-	class Cluster_WP_SideEffect: RK_Cluster_WP
-	{
-		timeToLive = 0.1;
-		airFriction = 4;
-		explosionEffects = "AAW_Side_Busrt_Effect";
 	};
 	class RK_Cluster_NP: MissileBase
 	{
@@ -178,9 +172,9 @@ class CfgAmmo
 		timeToLive = 20;
 		explosive = 0.8;
 		ExplosionEffects = "AAW_NP_Explosion";
-		CraterEffects = "AAW_NPSmokeBurst";
+		CraterEffects = "AAW_NPSmokeCrater";
 		audibleFire = 20;
-		SoundSetExplosion[] = {""};
+		SoundSetExplosion[] = {"ClusterBomb_Exp_SoundSet","ClusterBomb_Debris_SoundSet"};
 	};
 	/////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////Hydra////////////////////////////////////////////
