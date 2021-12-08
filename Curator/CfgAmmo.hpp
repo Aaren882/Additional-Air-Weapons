@@ -34,28 +34,23 @@ class CfgAmmo
 		simulation = "shotSubmunitions";
 	};
 	
-	//Shell
-	class Sh_82mm_WP_Mother;
-	class Sh_82mm_WP_Mother_Module: Sh_82mm_WP_Mother
-	{
-		submunitionAmmo[] = {"RK_Cluster_WP_Module",1};
-		submunitionInitSpeed = 8;
-	};
+	//Mothers
 	class Sh_155mm_WP_Mother;
 	class Sh_155mm_WP_Mother_Module: Sh_155mm_WP_Mother
 	{
-		submunitionAmmo[] = {"RK_Cluster_WP_Module",1};
+		submunitionAmmo[] = {"RK_Cluster_WP",1};
+		submunitionInitSpeed = 8;
+	};
+	class Sh_82mm_WP_Mother;
+	class Sh_82mm_WP_Mother_Module: Sh_82mm_WP_Mother
+	{
+		submunitionAmmo[] = {"RK_Cluster_WP",1};
 		submunitionInitSpeed = 8;
 	};
 	class R_230mm_WP_Mother;
 	class R_230mm_WP_Mother_Module: R_230mm_WP_Mother
 	{
-		submunitionAmmo[] = {"RK_Cluster_WP_Module",1};
+		submunitionAmmo[] = {"RK_Cluster_WP",1};
 		submunitionInitSpeed = 8;
-	};
-	class RK_Cluster_WP;
-	class RK_Cluster_WP_Module: RK_Cluster_WP
-	{
-		thrust = 0;
 	};
 };
