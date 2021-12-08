@@ -1,7 +1,7 @@
 //Settings
 class CfgSound3DProcessors
 {
-	class AWS_Explosion_3DProcessor
+	class AAW_Explosion_3DProcessor
 	{
 		type="panner";
 		innerRange=500;
@@ -12,7 +12,7 @@ class CfgSound3DProcessors
 };
 class cfgDistanceFilters
 {
-	class AWS_Explosion_distance_filter
+	class AAW_Explosion_distance_filter
 	{
 		type="lowpassfilter";
 		mincutofffrequency=30;
@@ -25,13 +25,13 @@ class cfgDistanceFilters
 //Sounds
 class CfgSoundSets
 {
-	class AWS_SFW_Explosion_SoundSet
+	class AAW_SFW_Explosion_SoundSet
 	{
 		soundShaders[]=
 		{
-			"AWS_SFW_Explosion_Near_SoundShader",
-			"AWS_SFW_Explosion_Mid_SoundShader",
-			"AWS_SFW_Explosion_Far_SoundShader"
+			"AAW_SFW_Explosion_Near_SoundShader",
+			"AAW_SFW_Explosion_Mid_SoundShader",
+			"AAW_SFW_Explosion_Far_SoundShader"
 		};
 		volumeFactor=1;
 		volumeCurve="InverseSquare2Curve";
@@ -42,22 +42,22 @@ class CfgSoundSets
 		occlusionFactor=0.5;
 		frequencyRandomizer=0.6;
 		frequencyRandomizerMin=0.3;
-		sound3DProcessingType="AWS_Explosion_3DProcessor";
-		distanceFilter="AWS_Explosion_distance_filter";
+		sound3DProcessingType="AAW_Explosion_3DProcessor";
+		distanceFilter="AAW_Explosion_distance_filter";
 	};
-	class AWS_Shell_Explosion_SoundSet: AWS_SFW_Explosion_SoundSet
+	class AAW_Shell_Explosion_SoundSet: AAW_SFW_Explosion_SoundSet
 	{
 		soundShaders[]=
 		{
-			"AWS_Shell_Explosion_Near_SoundShader",
-			"AWS_Shell_Explosion_Mid_SoundShader",
-			"AWS_Shell_Explosion_Far_SoundShader"
+			"AAW_Shell_Explosion_Near_SoundShader",
+			"AAW_Shell_Explosion_Mid_SoundShader",
+			"AAW_Shell_Explosion_Far_SoundShader"
 		};
 	};
 };
 class CfgSoundShaders
 {
-	class AWS_SFW_Explosion_Near_SoundShader
+	class AAW_SFW_Explosion_Near_SoundShader
 	{
 		samples[]=
 		{
@@ -76,11 +76,11 @@ class CfgSoundShaders
 		rangeCurve[]=
 		{
 			{0,1},
-			{199,0.8},
-			{200,0}
+			{499,0.8},
+			{500,0}
 		};
 	};
-	class AWS_SFW_Explosion_Mid_SoundShader
+	class AAW_SFW_Explosion_Mid_SoundShader
 	{
 		samples[]=
 		{
@@ -99,13 +99,13 @@ class CfgSoundShaders
 		rangeCurve[]=
 		{
 			{0,0},
-			{200,0},
+			{500,0},
 			{501,1},
 			{999,0.8},
 			{1000,0}
 		};
 	};
-	class AWS_SFW_Explosion_Far_SoundShader
+	class AAW_SFW_Explosion_Far_SoundShader
 	{
 		samples[]=
 		{
@@ -131,7 +131,7 @@ class CfgSoundShaders
 		};
 	};
 	//Shell
-	class AWS_Shell_Explosion_Near_SoundShader
+	class AAW_Shell_Explosion_Near_SoundShader
 	{
 		samples[]=
 		{
@@ -145,41 +145,41 @@ class CfgSoundShaders
 				1
 			}
 		};
-		volume=10;
+		volume=5;
 		range=200;
 		rangeCurve[]=
 		{
 			{0,1},
-			{199,0.8},
-			{200,0}
+			{499,0.8},
+			{500,0}
 		};
 	};
-	class AWS_Shell_Explosion_Mid_SoundShader
+	class AAW_Shell_Explosion_Mid_SoundShader
 	{
 		samples[]=
 		{
 			
 			{
-				"MG8\AdtionRks\Sounds\Shell_Burst1_near",
+				"MG8\AdtionRks\Sounds\Shell_Burst1_mid",
 				1
 			},
 			{
-				"MG8\AdtionRks\Sounds\Shell_Burst2_near",
+				"MG8\AdtionRks\Sounds\Shell_Burst2_mid",
 				1
 			}
 		};
-		volume=10;
+		volume=5;
 		range=1000;
 		rangeCurve[]=
 		{
 			{0,0},
-			{200,0},
+			{500,0},
 			{501,1},
 			{999,0.8},
 			{1000,0}
 		};
 	};
-	class AWS_Shell_Explosion_Far_SoundShader
+	class AAW_Shell_Explosion_Far_SoundShader
 	{
 		samples[]=
 		{
@@ -193,7 +193,7 @@ class CfgSoundShaders
 				1
 			}
 		};
-		volume=10;
+		volume=5;
 		range=1500;
 		rangeCurve[]=
 		{
