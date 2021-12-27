@@ -26,12 +26,33 @@ class AAW_WP_Burst
 };
 
 //Shell
-class AAW_Shell_Burst
+class AAW_Bomb_Burst
 {
 	class Shell_Burst_Smoke
 	{
 		simulation="particles";
-		type="AAW_Shell_Burst_Particle";
+		type="AAW_Bomb_Burst_Particle";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=1;
+	};
+	class Sparks
+	{
+		simulation="particles";
+		type="AAW_WP_Burst_Sparks_Effect";
+		position[]={0,0,0};
+		interval=1;
+		intensity=1;
+		lifeTime=1;
+	};
+};
+class AAW_Rocket_Burst
+{
+	class Shell_Burst_Smoke
+	{
+		simulation="particles";
+		type="AAW_Rocket_Burst_Particle";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
@@ -296,12 +317,24 @@ class AAW_Sound_SFW_Effect
 		lifeTime=0.1;
 	};
 };
-class AAW_Sound_Shell_Effect
+class AAW_Sound_Bomb_Effect
 {
 	class AAW_Sound_Effect
 	{
 		simulation="particles";
-		type="AAW_Sound_Effect_Shell";
+		type="AAW_Sound_Effect_Rocket";
+		position[]={0,0,0};
+		intensity=1;
+		interval=0;
+		lifeTime=0.1;
+	};
+};
+class AAW_Sound_Rocket_Effect
+{
+	class AAW_Sound_Effect
+	{
+		simulation="particles";
+		type="AAW_Sound_Effect_Rocket";
 		position[]={0,0,0};
 		intensity=1;
 		interval=0;
@@ -336,14 +369,18 @@ class CfgCloudlets
 	class ClusterExplosion;
 	class SmokeShellWhiteSmall;
 	//Sounds
-	class AAW_Sound_Effect_Shell: ClusterExplosion
+	class AAW_Sound_Effect_Bomb: ClusterExplosion
 	{
 		color[]={{1,1,1,0}};
 		lifeTime=0.01;
 		//Script
-		beforeDestroyScript="MG8\AdtionRks\Scripts\ShellEffect.sqf";
+		beforeDestroyScript="MG8\AdtionRks\Scripts\BombEffect.sqf";
 	};
-	class AAW_Sound_Effect_SFW: AAW_Sound_Effect_Shell
+	class AAW_Sound_Effect_Rocket: AAW_Sound_Effect_Bomb
+	{
+		beforeDestroyScript="MG8\AdtionRks\Scripts\RocketEffect.sqf";
+	};
+	class AAW_Sound_Effect_SFW: AAW_Sound_Effect_Bomb
 	{
 		//Script
 		beforeDestroyScript="MG8\AdtionRks\Scripts\SFWEffect.sqf";
@@ -794,7 +831,7 @@ class CfgCloudlets
 	//Burst Effects
 	class AAW_SFW_Burst_Particle: ClusterExplosion
 	{
-		interval=0.1;
+		interval=1;
 		moveVelocity[]={0,-1,0};
 		size[]={1,3,5};
 		color[]={{1,1,1,1},{1,1,1,0.5},{1,1,1,0}};
@@ -806,9 +843,9 @@ class CfgCloudlets
 		randomDirectionIntensity=0;
 		lifeTimeVar=1.5;
 	};
-	class AAW_Shell_Burst_Particle: AAW_Explo_WPSmoke
+	class AAW_Bomb_Burst_Particle: AAW_Explo_WPSmoke
 	{
-		interval=0.1;
+		interval=1;
 		size[] = {8};
 		lifeTime=3;
 		rubbing=1;
@@ -826,6 +863,11 @@ class CfgCloudlets
 			{1,1,1,0.05},
 			{1,1,1,0}
 		};
+	};
+	class AAW_Rocket_Burst_Particle: AAW_Bomb_Burst_Particle
+	{
+		size[]={1,2};
+		positionVar[]={0.1,0.1,0.1};
 	};
 };
 
