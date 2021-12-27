@@ -5,7 +5,7 @@ class AAW_Cluster_RK_Mother: PH_Cluster_Mother
 	submunitionAmmo[] = {"RK_Cluster_AP",1};
 	submunitionConeAngle = 10;
 	submunitionConeType[] = {"poissonDisc",15};
-	EffectFly = "AAW_Sound_Shell_Effect";
+	EffectFly = "AAW_Sound_Rocket_Effect";
 };
 class AAW_APM_RK_Mother: AAW_Cluster_RK_Mother
 {
@@ -44,6 +44,13 @@ class AAW_NP_RK_Mother: AAW_Cluster_RK_Mother
 	submunitionConeAngle = 5;
 	submunitionConeType[] = {"randomcenter",10};
 };
+class AAW_FG_RK_Mother: AAW_Cluster_RK_Mother
+{
+	submunitionAmmo[] = {"B_762x51_Ball",1};
+	submunitionConeAngle = 10;
+	submunitionInitSpeed = 800;
+	submunitionConeType[] = {"randomcenter",50};
+};
 class AAW_Flare_Mother: AAW_Cluster_RK_Mother
 {
 	triggerSpeedCoef[] = {0};
@@ -65,6 +72,7 @@ class AAW_DS_BM_Mother: AAW_Cluster_RK_Mother
 	submunitionAmmo[] = {"DS_Cluster_AP",1};
 	submunitionConeType[] = {"randomcenter",10};
 	submunitionConeAngle = 15;
+	EffectFly = "AAW_Sound_Bomb_Effect";
 };
 class AAW_APM_BM_Mother: AAW_DS_BM_Mother
 {

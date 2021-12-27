@@ -182,7 +182,7 @@ class CfgAmmo
 	{
 		warheadName = "Cluster";
 		triggerDistance = 50;
-		submunitionInitSpeed =50;
+		submunitionInitSpeed = 50;
 		simulation = "shotMissile";
 		submunitionAmmo[] = {"AAW_Cluster_RK_Mother",1};
 		submunitionConeAngle = 1;
@@ -193,7 +193,7 @@ class CfgAmmo
 		warheadName = "AP";
 		simulation = "shotMissile";
 		triggerDistance = 50;
-		submunitionInitSpeed =50;
+		submunitionInitSpeed = 50;
 		submunitionAmmo[] = {"AAW_APM_RK_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"poissonDisc",1};
@@ -203,7 +203,7 @@ class CfgAmmo
 		warheadName = "AT";
 		simulation = "shotMissile";
 		triggerDistance = 50;
-		submunitionInitSpeed =50;
+		submunitionInitSpeed = 50;
 		submunitionAmmo[] = {"AAW_ATM_RK_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"poissonDisc",1};
@@ -213,7 +213,7 @@ class CfgAmmo
 		warheadName = "APT";
 		simulation = "shotMissile";
 		triggerDistance = 50;
-		submunitionInitSpeed =50;
+		submunitionInitSpeed = 50;
 		submunitionAmmo[] = {"AAW_XM_RK_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"poissonDisc",1};
@@ -236,7 +236,7 @@ class CfgAmmo
 		warheadName = "Phosphorus";
 		simulation = "shotMissile";
 		triggerDistance = 150;
-		submunitionInitSpeed =50;
+		submunitionInitSpeed = 50;
 		submunitionAmmo[] = {"AAW_WP_RK_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"randomcenter",1};
@@ -246,8 +246,18 @@ class CfgAmmo
 		warheadName = "Napalm";
 		simulation = "shotMissile";
 		triggerDistance = 150;
-		submunitionInitSpeed =50;
+		submunitionInitSpeed = 50;
 		submunitionAmmo[] = {"AAW_NP_RK_Mother",1};
+		submunitionConeAngle = 1;
+		submunitionConeType[] = {"randomcenter",1};
+	};
+	class Rocket_04_FG_F: Rocket_04_HE_F
+	{
+		warheadName = "AirBurst";
+		simulation = "shotMissile";
+		triggerDistance = 50;
+		submunitionInitSpeed = 50;
+		submunitionAmmo[] = {"AAW_FG_RK_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"randomcenter",1};
 	};
