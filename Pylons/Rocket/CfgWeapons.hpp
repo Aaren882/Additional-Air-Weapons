@@ -80,6 +80,12 @@ class Cfgweapons
 		magazines[] = {"7Rnd_Rocket_04_NP_F"};
 		oldsterAnimValue = 5;
 	};
+	class Rocket_04_FG_Plane_CAS_01_F: Rocket_04_HE_Plane_CAS_01_F
+	{
+		displayName = "Hydra AirBurst Rocket";
+		magazines[] = {"7Rnd_Rocket_04_FG_F"};
+		oldsterAnimValue = 5;
+	};
 	//////////////////////////////////////////////////////////////DAR//////////////////////////////////////////////////////////////
 	class missiles_DAR;
 	class missiles_DAR_AP: missiles_DAR

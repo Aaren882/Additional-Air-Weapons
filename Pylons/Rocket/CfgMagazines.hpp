@@ -101,6 +101,15 @@ class CfgMagazines
 		#include "MFD\Hydra.hpp"
 		pylonWeapon="Rocket_04_NP_Plane_CAS_01_F";
 	};
+	class 7Rnd_Rocket_04_FG_F: PylonRack_7Rnd_Rocket_04_HE_F
+	{
+		displayName = "Hydra AirBurst Rocket";
+		#include "..\Pylons\West_Rockets_Hydra.hpp"
+		ammo = "Rocket_04_FG_F";
+		displayNameShort = "AirBurst";
+		#include "MFD\Hydra.hpp"
+		pylonWeapon="Rocket_04_FG_Plane_CAS_01_F";
+	};
 	//////////////////////////////////////////////////////////////DAR//////////////////////////////////////////////////////////////
 	class 12Rnd_missiles;
 	class PylonRack_12Rnd_missiles: 12Rnd_missiles

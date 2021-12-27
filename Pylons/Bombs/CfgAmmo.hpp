@@ -13,7 +13,7 @@ class CfgAmmo
 	class SubmunitionBase;
 	class BombCore;
 	//Sound Effects
-	class AAW_Cluster_Effect: BombCore
+	class AAW_Cluster_BM_Effect: BombCore
 	{
 		model = "\A3\weapons_f\empty";
 		proxyShape = "\A3\weapons_f\empty";
@@ -24,7 +24,7 @@ class CfgAmmo
 		simulation = "shotGrenade";
 		muzzleEffect = "";
 		CraterEffects = "EmptyEffect";
-		explosionEffects = "AAW_Shell_Burst";
+		explosionEffects = "AAW_Shell_BM_Burst";
 		explosionSoundEffect = "";
 		
 		deflectionSlowDown = 0;
@@ -35,7 +35,11 @@ class CfgAmmo
 			"AAW_Shell_Explosion_SoundSet"
 		};
 	};
-	class PH_Cluster_Effect: AAW_Cluster_Effect
+	class AAW_Cluster_RK_Effect: AAW_Cluster_BM_Effect
+	{
+		explosionEffects = "AAW_Shell_RK_Burst";
+	};
+	class PH_Cluster_Effect: AAW_Cluster_BM_Effect
 	{
 		explosionEffects = "AAW_SFW_Effect";
 		SoundSetExplosion[]=

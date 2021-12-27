@@ -44,6 +44,13 @@ class AAW_NP_RK_Mother: AAW_Cluster_RK_Mother
 	submunitionConeAngle = 5;
 	submunitionConeType[] = {"randomcenter",10};
 };
+class AAW_FG_RK_Mother: AAW_Cluster_RK_Mother
+{
+	submunitionAmmo[] = {"B_762x51_Ball",1};
+	submunitionConeAngle = 10;
+	submunitionInitSpeed = 800;
+	submunitionConeType[] = {"randomcenter",50};
+};
 class AAW_Flare_Mother: AAW_Cluster_RK_Mother
 {
 	triggerSpeedCoef[] = {0};
