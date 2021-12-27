@@ -706,7 +706,7 @@ class CfgCloudlets
 	};
 	
 	//Napalm
-	class AAW_NP_Explosion_Spark: AAW_WP_Explosion_Spark
+	class AAW_NP_Explosion_Spark
 	{
 		particleShape = "\A3\data_f\ParticleEffects\Shard\shard.p3d";
 		particleFSNtieth = 1;
