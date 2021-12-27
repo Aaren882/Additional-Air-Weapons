@@ -24,11 +24,11 @@ class CfgAmmo
 		simulation = "shotGrenade";
 		muzzleEffect = "";
 		CraterEffects = "EmptyEffect";
-		explosionEffects = "AAW_Shell_BM_Burst";
+		explosionEffects = "AAW_Bomb_Burst";
 		explosionSoundEffect = "";
 		
 		deflectionSlowDown = 0;
-		explosionTime = 0.01;
+		explosionTime = 0.08;
 		
 		SoundSetExplosion[]=
 		{
@@ -37,7 +37,7 @@ class CfgAmmo
 	};
 	class AAW_Cluster_RK_Effect: AAW_Cluster_BM_Effect
 	{
-		explosionEffects = "AAW_Shell_RK_Burst";
+		explosionEffects = "AAW_Rocket_Burst";
 	};
 	class PH_Cluster_Effect: AAW_Cluster_BM_Effect
 	{
@@ -64,6 +64,13 @@ class CfgAmmo
 	class BM_Cluster_WP: RK_Cluster_WP
 	{
 		airFriction = 3;
+	};
+	class RK_Cluster_FG: BulletBase
+	{
+		hit = 15;
+		indirectHit = 20;
+		indirectHitRange = 0.1;
+		caliber = 4;
 	};
 	/////////////////////////SFW Main Base/////////////////////////////////
 	class BombCluster_01_PH_F: Bomb_04_F
@@ -139,7 +146,6 @@ class CfgAmmo
 		submunitionDirectionType = "SubmunitionModelDirection";
 		EffectFly = "AAW_Sound_SFW_Effect";
 	};
-	class ShellBase;
 	class PH_Cluster_AP: BulletBase
 	{
 		model = "\a3\Weapons_F_Orange\Ammo\BombCluster_01_sub_F";
