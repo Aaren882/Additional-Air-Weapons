@@ -40,7 +40,7 @@ class AAW_Bomb_Burst
 	class Sparks
 	{
 		simulation="particles";
-		type="AAW_WP_Burst_Sparks_Effect";
+		type="AAW_Bomb_Burst_Sparks_Effect";
 		position[]={0,0,0};
 		interval=1;
 		intensity=1;
@@ -61,7 +61,7 @@ class AAW_Rocket_Burst
 	class Sparks
 	{
 		simulation="particles";
-		type="AAW_WP_Burst_Sparks_Effect";
+		type="AAW_Rocket_Burst_Sparks_Effect";
 		position[]={0,0,0};
 		interval=1;
 		intensity=1;
@@ -131,11 +131,93 @@ class AAW_WP_Explosion_Smoke
 		position[]={0,0,0};
 		interval=1;
 		intensity=1;
-		lifeTime=6;
+		lifeTime=0.5;
 	};
 };
 //WP Crater
 class AAW_WP_Crater
+{
+	class sound
+	{
+		simulation="sound";
+		type="Smoke_Loop";
+		interval=1;
+		intensity=1;
+		lifeTime=15;
+	};
+	class Light
+	{
+		simulation="light";
+		type="AAW_WP_Burst_Light";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=15;
+	};
+	class Burn_Smoke
+	{
+		simulation="particles";
+		type="AAW_Explo_WPSmoke";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=15;
+	};
+};
+//WP Impact
+class AAW_WPTrailEffect_Sec
+{
+	class sound
+	{
+		simulation="sound";
+		type="Smoke_Loop";
+		interval=1;
+		intensity=1;
+		lifeTime=15;
+	};
+	class Trails
+	{
+		simulation="particles";
+		type="AAW_WPTrailEffect";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=10;
+	};
+	class Light
+	{
+		simulation="light";
+		type="AAW_WP_Burst_Trail_Light";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=10;
+	};
+};
+//Single WP
+class AAW_SWP_Explosion
+{
+	class Smoke
+	{
+		simulation="particles";
+		type="AAW_Explo_SWP";
+		position[]={0,0,0};
+		interval=1;
+		intensity=1;
+		lifeTime=0.5;
+	};
+	class Particles
+	{
+		simulation="particles";
+		type="AAW_SWP_Explosion_Spark";
+		position[]={0,0,0};
+		interval=1;
+		intensity=1;
+		lifeTime=0.5;
+	};
+};
+//Crater
+class AAW_SWP_Crater
 {
 	class sound
 	{
@@ -154,38 +236,17 @@ class AAW_WP_Crater
 		interval=1;
 		lifeTime=10;
 	};
-	class Explosion
+	class Burn_Smoke
 	{
 		simulation="particles";
-		type="AAW_Explo_WPSmoke";
+		type="AAW_Burn_SWPSmoke";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
 		lifeTime=10;
 	};
 };
-//Sec
-class AAW_WPTrailEffect_Sec
-{
-	class Trails
-	{
-		simulation="particles";
-		type="AAW_WPTrailEffect";
-		position[]={0,0,0};
-		intensity=1;
-		interval=1;
-		lifeTime=6;
-	};
-	class Light
-	{
-		simulation="light";
-		type="AAW_WP_Burst_Trail_Light";
-		position[]={0,0,0};
-		intensity=1;
-		interval=1;
-		lifeTime=6;
-	};
-};
+
 //Napalm
 class AAW_NP_Explosion
 {
@@ -237,6 +298,7 @@ class AAW_NP_Fire_Ball_Explosion
 		lifeTime=20;
 	};
 };
+//Crater
 class AAW_NPSmokeCrater
 {
 	class NapalmFireLight
@@ -287,7 +349,7 @@ class AAW_NPSmokeCrater
 	{
 		simulation="particles";
 		type="NPSmoke_Ground";
-		position[]={0,2,0};
+		position[]={0,1,0};
 		intensity=1;
 		interval=1;
 		lifeTime=20;
@@ -297,6 +359,59 @@ class AAW_NPSmokeCrater
 		simulation="particles";
 		type="FireSparks";
 		position[]={0,2,0};
+		intensity=1;
+		interval=1;
+		lifeTime=20;
+	};
+};
+//Single
+class AAW_SNP_Explosion
+{
+	class Particles
+	{
+		simulation="particles";
+		type="AAW_SNP_Explosion_Spark";
+		position[]={0,0,0};
+		interval=1;
+		intensity=1;
+		lifeTime=0.5;
+	};
+	class Smoke
+	{
+		simulation="particles";
+		type="AAW_Explo_Smoke_SNP";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=0.5;
+	};
+};
+//Crater
+class AAW_SNPSmokeCrater: AAW_NPSmokeCrater
+{
+	class NP_Fire_Explo
+	{
+		simulation="particles";
+		type="SNP_Fire_Explo";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=20;
+	};
+	class NapalmTallSmoke
+	{
+		simulation="particles";
+		type="SNPSmoke_Up";
+		position[]={0,5,0};
+		intensity=1;
+		interval=1;
+		lifeTime=20;
+	};
+	class Napalm_Smoke
+	{
+		simulation="particles";
+		type="SNPSmoke_Ground";
+		position[]={0,1,0};
 		intensity=1;
 		interval=1;
 		lifeTime=20;
@@ -314,7 +429,7 @@ class AAW_Sound_SFW_Effect
 		position[]={0,0,0};
 		intensity=1;
 		interval=0;
-		lifeTime=0.1;
+		lifeTime=1;
 	};
 };
 class AAW_Sound_Bomb_Effect
@@ -322,7 +437,7 @@ class AAW_Sound_Bomb_Effect
 	class AAW_Sound_Effect
 	{
 		simulation="particles";
-		type="AAW_Sound_Effect_Rocket";
+		type="AAW_Sound_Effect_Bomb";
 		position[]={0,0,0};
 		intensity=1;
 		interval=0;
@@ -372,7 +487,8 @@ class CfgCloudlets
 	class AAW_Sound_Effect_Bomb: ClusterExplosion
 	{
 		color[]={{1,1,1,0}};
-		lifeTime=0.01;
+		lifeTime=0.25;
+		timerPeriod = 1;
 		//Script
 		beforeDestroyScript="MG8\AdtionRks\Scripts\BombEffect.sqf";
 	};
@@ -403,14 +519,14 @@ class CfgCloudlets
 		animationName="";
 		animationSpeed[]={1000};
 		timerPeriod=0;
-		lifeTime=4;
+		lifeTime=8;
 		position[]={0,0,1};
 		moveVelocity[]={0,0,0};
 		rotationVelocity=0;
 		weight=1.25;
 		volume=1;
 		rubbing=2;
-		size[]={1,2.5,3.6};
+		size[]={1.5,2};
 		color[]=
 		{
 			{0.7,0.8,1,0.8},
@@ -420,7 +536,7 @@ class CfgCloudlets
 			{0.7,0.8,1,0}
 		};
 		lifeTimeVar=1;
-		positionVar[]={0,0,0};
+		positionVar[]={0.2,0.2,0.2};
 		positionVarConst[]={0,0,0};
 		MoveVelocityVar[]={0,0,0};
 		sizeVar=0.1;
@@ -486,6 +602,11 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0.2;
 		randomDirectionIntensityVar=0.1;
 	};
+	class SNPSmoke_Up: NPSmoke_Up
+	{
+		size[]={10,13,18};
+		moveVelocity[]={0,75,0};
+	};
 	class NPSmoke_Ground: NPSmoke_Up
 	{
 		interval=0.2;
@@ -502,6 +623,11 @@ class CfgCloudlets
 		
 		rotationVelocity=0;
 		rotationVelocityVar=0.1;
+	};
+	class SNPSmoke_Ground: NPSmoke_Ground
+	{
+		moveVelocity[]={0,3,0};
+		size[]={5,8,10};
 	};
 	class AAW_NPRefract: NPSmoke_Up
 	{
@@ -525,7 +651,14 @@ class CfgCloudlets
 		volume=1;
 		rubbing=0.5;
 		size[]={4,5,8};
-		color[]={{0.3,0.3,0.3,1},{0.3,0.3,0.3,0.8},{0.3,0.3,0.3,0.4},{0.3,0.3,0.3,0.2},{0.3,0.3,0.3,0}};
+		color[]=
+		{
+			{0.3,0.3,0.3,1},
+			{0.3,0.3,0.3,0.8},
+			{0.3,0.3,0.3,0.4},
+			{0.3,0.3,0.3,0.2},
+			{0.3,0.3,0.3,0}
+		};
 		//colorCoef[]={1,1,1,1.4};
 		animationSpeed[]={2,1};
 		
@@ -554,7 +687,7 @@ class CfgCloudlets
 		rotationVelocity=0;
 		rotationVelocityVar=10;
 		
-		interval=0.05;
+		interval=0.01;
 		
 		color[]={{1,0.8,0.8,-50},{1,0.8,0.8,0}};
 		colorVar[]={0.1,0.1,0.1,0};
@@ -578,29 +711,34 @@ class CfgCloudlets
 		damageTime=0.1;
 		constantDistance=3;
 	};
-	
+	class SNP_Fire_Explo: NP_Fire_Explo
+	{
+		size[]={3,2,1.5,0};
+		lifeTime=2;
+		moveVelocity[]={0,10,0};
+	};
 	//Explosion
-	class AAW_Explo_WP: WPCloud
+	class AAW_Explo_SWP: WPCloud
 	{
 		interval=0.1;
-		lifeTime=5;
+		lifeTime=10;
 		lifeTimeVar=1.5;
-		size[]={3,5,6};
+		size[]={5,8};
 		color[]=
 		{
-			{1,1,1,0},
-			{1,1,1,0.1},
 			{1,1,1,0.3},
 			{1,1,1,0.05},
 			{1,1,1,0}
 		};
-		weight=0.05;
-		volume=0.04;
-		rubbing=0.3;
+		weight=0.04;
+		volume=0.05;
+		rubbing=0.8;
 		
-		positionVar[]={0.05,0.3,0.05};
+		animationSpeed[]={1000};
+		
+		positionVar[]={0.5,0.5,0.5};
 		position[]={0,0,0};
-		moveVelocity[]={0,1,0};
+		moveVelocity[]={0,5,0};
 		MoveVelocityVar[]={0.5,0.75,0.5};
 		rotationVelocity=0;
 		rotationVelocityVar=0.2;
@@ -610,12 +748,25 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0.2;
 		randomDirectionIntensityVar=0.1;
 	};
-	class AAW_Explo_WPSmoke: AAW_Explo_WP
+	class AAW_Explo_WPSmoke: AAW_Explo_SWP
 	{
 		interval=0.1;
-		lifeTime=6;
+		lifeTime=4;
 		lifeTimeVar=1.5;
 		size[]={1,2};
+		color[]=
+		{
+			{1,1,1,0.01},
+			{1,1,1,0.5},
+			{1,1,1,0.3},
+			{1,1,1,0.05},
+			{1,1,1,0}
+		};
+		
+		moveVelocity[]={0,5,0};
+		
+		weight=0.05;
+		volume=0.04;
 		
 		damageType="Fire";
 		coreIntensity=2;
@@ -625,17 +776,25 @@ class CfgCloudlets
 		
 		positionVar[]={0.1,0.3,0.1};
 		position[]={0,0,0};
-		moveVelocity[]={0,1,0};
+	};
+	class AAW_Burn_SWPSmoke: AAW_Explo_WPSmoke
+	{
+		weight=0.04;
+		volume=0.05;
+		lifeTime=5;
+		size[]={5,10};
+		moveVelocity[]={0,20,0};
 		MoveVelocityVar[]={0.5,0.75,0.5};
+		positionVar[]={1,1,1};
 	};
 	
 	class AAW_WPTrailEffect: WPTrailEffect
 	{
 		interval=0.05;
-		lifeTime=3;
+		lifeTime=4;
 		color[]=
 		{
-			{1,1,1,0},
+			{1,1,1,0.5},
 			{1,1,1,0.1},
 			{1,1,1,0.05},
 			{1,1,1,0}
@@ -643,9 +802,26 @@ class CfgCloudlets
 		volume=0.0501;
 		weight=0.05;
 		size[]={0.75,1.75,2,3};
+		
+		moveVelocity[]={0,2,0};
+		MoveVelocityVar[]={0.5,0.75,0.5};
+		
 		rubbing=3;
 		
 		blockAIVisibility=1;
+	};
+	//Napalm
+	class AAW_Explo_Smoke_SNP: AAW_Explo_SWP
+	{
+		color[]=
+		{
+			{0.1,0.1,0.1,0.8},
+			{0.1,0.1,0.1,1},
+			{0.1,0.1,0.1,1},
+			{0.1,0.1,0.1,0.05},
+			{0.1,0.1,0.1,0.01},
+			{0.1,0.1,0.1,0}
+		};
 	};
 	//Sparks
 	class ExpSparks1;
@@ -661,7 +837,8 @@ class CfgCloudlets
 		
 		animationSpeed[]={0.25};
 		rotationVelocity=0;
-		lifeTime=6;
+		lifeTime=8;
+		lifeTimeVar=2;
 		size[]={0};
 		color[]=
 		{
@@ -673,7 +850,6 @@ class CfgCloudlets
 		MoveVelocityVar[]={4,1,4};
 		bounceOnSurface=0.4;
 		bounceOnSurfaceVar=0.3;
-		lifeTimeVar=1.5;
 		position[]={0,0,0};
 		positionVar[]={0.1,0,0.1};
 		rotationVelocityVar=2;
@@ -694,8 +870,34 @@ class CfgCloudlets
 		};
 		particleEffects="AAW_WPTrailEffect_Sec";
 	};
+	class AAW_SWP_Explosion_Spark: AAW_WP_Explosion_Spark
+	{
+		interval=0.02;
+		lifeTime=10;
+		lifeTimeVar=5;
+		moveVelocity[] = {"outDirX * outSpeed * 50",10,"outDirZ * outSpeed * 50"};
+		MoveVelocityVar[]={5,6,5};
+		positionVar[]={3,3,3};
+		
+		bounceOnSurface=0.1;
+		bounceOnSurfaceVar=0.2;
+		
+		weight=15;
+		volume=1;
+	};
+	class AAW_SNP_Explosion_Spark: AAW_SWP_Explosion_Spark
+	{
+		moveVelocity[] = {"outDirX * outSpeed * 10",5,"outDirZ * outSpeed * 10"};
+		bounceOnSurface=0.05;
+		bounceOnSurfaceVar=0.1;
+		positionVar[]={2,2,2};
+		particleEffects="AAW_NP_Fire_Ball_Explosion";
+		
+		weight = 24;
+		volume = 8;
+	};
 	//Burst
-	class AAW_WP_Burst_Sparks_Effect: AAW_WP_Explosion_Spark
+	class AAW_Bomb_Burst_Sparks_Effect: AAW_WP_Explosion_Spark
 	{
 		particleShape = "\A3\data_f\ParticleEffects\Universal\Smoke";
 		particleFSNtieth = 1;
@@ -741,9 +943,15 @@ class CfgCloudlets
 		};
 		particleEffects="AAW_WP_Burst";
 	};
+	class AAW_Rocket_Burst_Sparks_Effect: AAW_Bomb_Burst_Sparks_Effect
+	{
+		position[]={0,0,0};
+		positionVar[]={0.05,0.05,0.05};
+	};
 	
 	//Napalm
-	class AAW_NP_Explosion_Spark
+	class ObjectDestructionShards;
+	class AAW_NP_Explosion_Spark: ObjectDestructionShards
 	{
 		particleShape = "\A3\data_f\ParticleEffects\Shard\shard.p3d";
 		particleFSNtieth = 1;
@@ -779,20 +987,22 @@ class CfgCloudlets
 		interval=0.1;
 		
 		rubbing=2;
+		lifeTime=3;
 		
 		MoveVelocityVar[]={0,1,0};
 		position[]={0,0,0};
 		positionVar[]={0,0,0};
 		
-		lifeTime=1.5;
 		size[]={0.5,0.25,0};
 	};
 	class NPFireBallSmoke: AAW_WPTrailEffect
 	{
-		interval=0.1;
+		interval=0.05;
 		
 		volume=0.1;
 		weight=0.08;
+		
+		lifeTime=6;
 		
 		color[]=
 		{
@@ -846,11 +1056,12 @@ class CfgCloudlets
 	class AAW_Bomb_Burst_Particle: AAW_Explo_WPSmoke
 	{
 		interval=1;
-		size[] = {8};
-		lifeTime=3;
+		size[] = {5.5};
+		sizeVar = 0.3;
+		lifeTime=1;
 		rubbing=1;
 		moveVelocityVar[]={0,0,0};
-		positionVar[]={0,0,0};
+		positionVar[] = {0.25,0.25,0};
 		randomDirectionPeriod=0;
 		randomDirectionIntensity=0;
 		lifeTimeVar=1.5;
@@ -866,7 +1077,6 @@ class CfgCloudlets
 	};
 	class AAW_Rocket_Burst_Particle: AAW_Bomb_Burst_Particle
 	{
-		size[]={1,2};
 		positionVar[]={0.1,0.1,0.1};
 	};
 };
@@ -876,9 +1086,9 @@ class CfgLights
 {
 	class LargeFireLight
 	{
-		diffuse[]={1,0.44999999,0.15000001};
-		color[]={1,0.44999999,0.15000001};
-		ambient[]={1,0.44999999,0.15000001};
+		diffuse[]={1,0.45,0.15};
+		color[]={1,0.45,0.15};
+		ambient[]={1,0.45,0.15};
 		brightness=200;
 		size=2.3;
 		intensity=50000;
