@@ -1,7 +1,7 @@
 //Rockets
 class AAW_Cluster_RK_Mother: PH_Cluster_Mother
 {
-	triggerSpeedCoef[] = {0.8,1};
+	triggerSpeedCoef[] = {0.3,0.5,0.8,1};
 	submunitionAmmo[] = {"RK_Cluster_AP",1};
 	submunitionConeAngle = 10;
 	submunitionConeType[] = {"poissonDisc",15};
@@ -34,9 +34,9 @@ class AAW_SW_RK_Mother: AAW_Cluster_RK_Mother
 class AAW_WP_RK_Mother: AAW_Cluster_RK_Mother
 {
 	submunitionAmmo[] = {"RK_Cluster_WP",1};
-	submunitionConeAngle = 5;
+	submunitionConeAngle = 8;
 	submunitionConeType[] = {"randomcenter",10};
-	submunitionInitSpeed = 30;
+	submunitionInitSpeed = 3;
 };
 class AAW_NP_RK_Mother: AAW_Cluster_RK_Mother
 {
@@ -49,7 +49,7 @@ class AAW_FG_RK_Mother: AAW_Cluster_RK_Mother
 	submunitionAmmo[] = {"RK_Cluster_FG",1};
 	submunitionConeAngle = 3;
 	submunitionInitSpeed = 1000;
-	submunitionConeType[] = {"randomcenter",50};
+	submunitionConeType[] = {"randomcenter",80};
 };
 class AAW_Flare_Mother: AAW_Cluster_RK_Mother
 {
@@ -106,6 +106,11 @@ class AAW_NP_BM_Mother: AAW_DS_BM_Mother
 	submunitionAmmo[] = {"RK_Cluster_NP",1};
 	submunitionConeType[] = {"randomcenter",10};
 };
+class AWS_Men_Rocket_Mother: AAW_DS_BM_Mother
+{
+	submunitionAmmo[] = {"Mo_cluster_Bomb_01_F",1};
+	submunitionConeType[] = {"randomcenter",10};
+};
 /////Cluster Bombs//////
 ///////////01///////////
 class Cluster_01_DS_Mother: AAW_Cluster_RK_Mother
@@ -133,7 +138,7 @@ class Cluster_01_SW_Mother: Cluster_01_APM_Mother
 };
 class Cluster_01_WP_Mother: Cluster_01_APM_Mother
 {
-	submunitionAmmo[] = {"RK_Cluster_WP",1};
+	submunitionAmmo[] = {"BM_Cluster_WP",1};
 	submunitionInitSpeed = 12;
 	triggerSpeedCoef[] = {0.5,1,1.8,2};
 	submunitionConeType[] = {"randomcenter",10};
@@ -167,7 +172,7 @@ class Cluster_02_SW_Mother: Cluster_01_APM_Mother
 };
 class Cluster_02_WP_Mother: Cluster_01_WP_Mother
 {
-	
+
 };
 class Cluster_02_NP_Mother: Cluster_01_APM_Mother
 {
@@ -198,7 +203,7 @@ class Cluster_03_SW_Mother: Cluster_01_APM_Mother
 };
 class Cluster_03_WP_Mother: Cluster_01_WP_Mother
 {
-	
+
 };
 class Cluster_03_NP_Mother: Cluster_01_APM_Mother
 {
@@ -207,55 +212,40 @@ class Cluster_03_NP_Mother: Cluster_01_APM_Mother
 //ARTY
 class Sh_155mm_WP_Mother: AAW_Cluster_RK_Mother
 {
-	triggerTime = 0.01;
-	submunitionConeAngle = 10;
+	submunitionConeAngle = 20;
 	triggerSpeedCoef[] = {0.8,1,1.5,2};
 	submunitionInitSpeed = 50;
 	submunitionConeType[] = {"randomcenter",20};
 	submunitionAmmo[] = {"RK_Cluster_WP",1};
 };
-class Sh_155mm_NP_Mother: AAW_Cluster_RK_Mother
+class Sh_155mm_NP_Mother: Sh_155mm_WP_Mother
 {
-	triggerTime = 0.01;
-	submunitionConeAngle = 1;
-	triggerSpeedCoef[] = {0.8,1,1.5,2};
-	submunitionInitSpeed = 50;
 	submunitionConeType[] = {"randomcenter",20};
 	submunitionAmmo[] = {"RK_Cluster_NP",1};
 };
 class Sh_82mm_WP_Mother: AAW_Cluster_RK_Mother
 {
-	triggerTime = 0.01;
-	submunitionConeAngle = 10;
-	triggerSpeedCoef[] = {0.8,1,1.5,2};
+	submunitionConeAngle = 35;
+	triggerSpeedCoef[] = {0.5,0.8,1.4,2};
 	submunitionInitSpeed = 50;
 	submunitionAmmo[] = {"RK_Cluster_WP",1};
 	submunitionConeType[] = {"randomcenter",15};
 };
-class Sh_82mm_NP_Mother: AAW_Cluster_RK_Mother
+class Sh_82mm_NP_Mother: Sh_82mm_WP_Mother
 {
-	triggerTime = 0.01;
-	submunitionConeAngle = 20;
-	triggerSpeedCoef[] = {0.8,1,1.5,2};
-	submunitionInitSpeed = 50;
 	submunitionConeType[] = {"randomcenter",10};
 	submunitionAmmo[] = {"RK_Cluster_NP",1};
 };
 class R_230mm_WP_Mother: AAW_Cluster_RK_Mother
 {
-	triggerTime = 0.01;
-	submunitionConeAngle = 10;
+	submunitionConeAngle = 30;
 	triggerSpeedCoef[] = {0.8,1,1.5,2};
 	submunitionInitSpeed = 50;
 	submunitionConeType[] = {"randomcenter",30};
 	submunitionAmmo[] = {"RK_Cluster_WP",1};
 };
-class R_230mm_NP_Mother: AAW_Cluster_RK_Mother
+class R_230mm_NP_Mother: R_230mm_WP_Mother
 {
-	triggerTime = 0.01;
-	submunitionConeAngle = 10;
-	triggerSpeedCoef[] = {0.8,1,1.5,2};
-	submunitionInitSpeed = 50;
 	submunitionConeType[] = {"randomcenter",25};
 	submunitionAmmo[] = {"RK_Cluster_NP",1};
 };

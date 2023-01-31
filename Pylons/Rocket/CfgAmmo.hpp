@@ -31,7 +31,13 @@ class CfgAmmo
 	};
 	
 	#include "Mothers.hpp"
-	
+	class RK_Cluster_FG: BulletBase
+	{
+		hit = 15;
+		indirectHit = 20;
+		indirectHitRange = 0.1;
+		caliber = 0.869565;
+	};
 	/////////////////////////////////////////////////////////////////////////////////////////////
 	class M_PG_Flare: M_PG_AT
 	{
@@ -98,15 +104,15 @@ class CfgAmmo
 	};
 	class M_PG_AP: M_PG_AT
 	{
-		hit = 200;
+		hit = 95;
+		indirectHit = 25;
+		indirectHitRange = 2.5;
 		triggerOnImpact = 1;
 		laserLock = 1;
 		irLock = 1;
 		nvLock = 1;
-		submunitionConeAngle = 30;
-		submunitionAmmo[] = {"ammo_Penetrator_small_AP",0.05,"ammo_Penetrator_big_AP",0.95};
-		submunitionDirectionType = "SubmunitionModelDirection";
-		submunitionConeType[] = {"poissonDisc",10};
+		//submunitionAmmo[] = {"ammo_Penetrator_small_AP",0.05,"ammo_Penetrator_big_AP",0.95};
+		submunitionAmmo = "ammo_Penetrator_Rocket_04_AP";
 	};
 	class RK_Smoke_White: SmokeShell
 	{
@@ -133,13 +139,14 @@ class CfgAmmo
 		model = "\A3\weapons_f\ammo\shell";
 		simulation = "shotMissile";
 		deflectionSlowDown = 1;
+		initTime = 0;
 		//sideAirFriction = 0.1;
 		timeToLive = 30;
 		thrustTime = 30;
 		thrust = 20;
 		maxSpeed = 100;
 		deflecting = 40;
-		airFriction = 2;
+		airFriction = 4;
 		explosionEffects = "AAW_WP_Explosion_Smoke";
 		CraterEffects = "AAW_WP_Crater";
 		EffectsFire = "EmptyEffect";
@@ -156,6 +163,10 @@ class CfgAmmo
 		class HitEffects
 		{
 		};
+	};
+	class BM_Cluster_WP: RK_Cluster_WP
+	{
+		airFriction = 2.5;
 	};
 	class RK_Cluster_NP: MissileBase
 	{
@@ -180,6 +191,7 @@ class CfgAmmo
 	////////////////////////////////////////////Hydra////////////////////////////////////////////
 	class Rocket_04_Cluster_F: Rocket_04_HE_F
 	{
+		explosive = 0;
 		warheadName = "Cluster";
 		triggerDistance = 50;
 		submunitionInitSpeed = 50;
@@ -187,94 +199,67 @@ class CfgAmmo
 		submunitionAmmo[] = {"AAW_Cluster_RK_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"poissonDisc",1};
+		SoundSetExplosion[]={};
 	};
-	class Rocket_04_APM_F: Rocket_04_HE_F
+	class Rocket_04_APM_F: Rocket_04_Cluster_F
 	{
 		warheadName = "AP";
-		simulation = "shotMissile";
-		triggerDistance = 50;
-		submunitionInitSpeed = 50;
 		submunitionAmmo[] = {"AAW_APM_RK_Mother",1};
-		submunitionConeAngle = 1;
-		submunitionConeType[] = {"poissonDisc",1};
 	};
-	class Rocket_04_ATM_F: Rocket_04_HE_F
+	class Rocket_04_ATM_F: Rocket_04_Cluster_F
 	{
 		warheadName = "AT";
-		simulation = "shotMissile";
-		triggerDistance = 50;
-		submunitionInitSpeed = 50;
 		submunitionAmmo[] = {"AAW_ATM_RK_Mother",1};
-		submunitionConeAngle = 1;
-		submunitionConeType[] = {"poissonDisc",1};
 	};
-	class Rocket_04_XM_F: Rocket_04_HE_F
+	class Rocket_04_XM_F: Rocket_04_Cluster_F
 	{
 		warheadName = "APT";
-		simulation = "shotMissile";
-		triggerDistance = 50;
-		submunitionInitSpeed = 50;
 		submunitionAmmo[] = {"AAW_XM_RK_Mother",1};
-		submunitionConeAngle = 1;
-		submunitionConeType[] = {"poissonDisc",1};
 	};
-	class Rocket_04_SW_F: Rocket_04_HE_F
+	class Rocket_04_SW_F: Rocket_04_Cluster_F
 	{
 		warheadName = "Smoke";
-		simulation = "shotMissile";
 		submunitionAmmo[] = {"AAW_SW_RK_Mother",1};
-		submunitionConeType[] = {"randomcenter",1};
-		submunitionConeAngle = 1;
-		triggerDistance = 50;
-		cost = 200;
 		airFriction = 0;
-		muzzleEffect = "";
-		hit = 1;
 	};
-	class Rocket_04_WP_F: Rocket_04_HE_F
+	class Rocket_04_WP_F: Rocket_04_Cluster_F
 	{
 		warheadName = "Phosphorus";
-		simulation = "shotMissile";
 		triggerDistance = 150;
-		submunitionInitSpeed = 50;
+		submunitionInitSpeed = 5;
 		submunitionAmmo[] = {"AAW_WP_RK_Mother",1};
-		submunitionConeAngle = 1;
-		submunitionConeType[] = {"randomcenter",1};
 	};
-	class Rocket_04_NP_F: Rocket_04_HE_F
+	class Rocket_04_NP_F: Rocket_04_WP_F
 	{
 		warheadName = "Napalm";
-		simulation = "shotMissile";
-		triggerDistance = 150;
-		submunitionInitSpeed = 50;
 		submunitionAmmo[] = {"AAW_NP_RK_Mother",1};
-		submunitionConeAngle = 1;
-		submunitionConeType[] = {"randomcenter",1};
 	};
-	class Rocket_04_FG_F: Rocket_04_HE_F
+	class Rocket_04_FG_F: Rocket_04_Cluster_F
 	{
 		warheadName = "AirBurst";
-		simulation = "shotMissile";
-		triggerDistance = 50;
-		submunitionInitSpeed = 50;
+		triggerDistance = 100;
 		submunitionAmmo[] = {"AAW_FG_RK_Mother",1};
-		submunitionConeAngle = 1;
-		submunitionConeType[] = {"randomcenter",1};
+	};
+	class Rocket_04_SWP_F: Rocket_04_HE_F
+	{
+		warheadName = "Phosphorus";
+		explosionEffects = "AAW_SWP_Explosion";
+		CraterEffects = "AAW_SWP_Crater";
+	};
+	class Rocket_04_SNP_F: Rocket_04_HE_F
+	{
+		warheadName = "Napalm";
+		explosionEffects = "AAW_SNP_Explosion";
+		CraterEffects = "AAW_SNPSmokeCrater";
 	};
 	////////////////////////////////////////////DAR////////////////////////////////////////////
 	class DAR_AP: Rocket_04_AP_F
 	{
 		model = "\A3\Weapons_F\Ammo\Rocket_01_fly_F";
 		proxyShape = "\A3\Weapons_F\Ammo\Rocket_01_F";
-		hit = 200;
-		/*triggerOnImpact = 1;
-		laserLock = 1;
-		irLock = 1;
-		nvLock = 1;*/
-		submunitionConeAngle = 30;
-		submunitionAmmo[] = {"ammo_Penetrator_small_AP",0.05,"ammo_Penetrator_big_AP",0.95};
-		submunitionDirectionType = "SubmunitionModelDirection";
-		submunitionConeType[] = {"poissonDisc",5};
+		hit = 100;
+		//submunitionAmmo[] = {"ammo_Penetrator_small_AP",0.05,"ammo_Penetrator_big_AP",0.95};
+		submunitionAmmo = "ammo_Penetrator_Rocket_04_AP";
 	};
 	class DAR_Cluster: Rocket_04_Cluster_F
 	{
@@ -311,6 +296,21 @@ class CfgAmmo
 		proxyShape = "\A3\Weapons_F\Ammo\Rocket_01_F";
 	};
 	class DAR_NP: Rocket_04_NP_F
+	{
+		model = "\A3\Weapons_F\Ammo\Rocket_01_fly_F";
+		proxyShape = "\A3\Weapons_F\Ammo\Rocket_01_F";
+	};
+	class DAR_FG: Rocket_04_FG_F
+	{
+		model = "\A3\Weapons_F\Ammo\Rocket_01_fly_F";
+		proxyShape = "\A3\Weapons_F\Ammo\Rocket_01_F";
+	};
+	class DAR_SWP: Rocket_04_SWP_F
+	{
+		model = "\A3\Weapons_F\Ammo\Rocket_01_fly_F";
+		proxyShape = "\A3\Weapons_F\Ammo\Rocket_01_F";
+	};
+	class DAR_SNP: Rocket_04_SNP_F
 	{
 		model = "\A3\Weapons_F\Ammo\Rocket_01_fly_F";
 		proxyShape = "\A3\Weapons_F\Ammo\Rocket_01_F";
@@ -355,6 +355,21 @@ class CfgAmmo
 		model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_fly_F.p3d";
 		proxyShape = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
 	};
+	class Rocket_03_FG_F: Rocket_04_FG_F
+	{
+		model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_fly_F.p3d";
+		proxyShape = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
+	};
+	class Rocket_03_SWP_F: Rocket_04_SWP_F
+	{
+		model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_fly_F.p3d";
+		proxyShape = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
+	};
+	class Rocket_03_SNP_F: Rocket_04_SNP_F
+	{
+		model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_fly_F.p3d";
+		proxyShape = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
+	};
 	////////////////////////////////////////////SkyFire////////////////////////////////////////////
 	class R_80mm_AP: DAR_AP
 	{
@@ -392,6 +407,21 @@ class CfgAmmo
 		proxyShape = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";
 	};
 	class R_80mm_NP: Rocket_04_NP_F
+	{
+		model = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";
+		proxyShape = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";
+	};
+	class R_80mm_FG: Rocket_04_FG_F
+	{
+		model = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";
+		proxyShape = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";
+	};
+	class R_80mm_SWP: Rocket_04_SWP_F
+	{
+		model = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";
+		proxyShape = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";
+	};
+	class R_80mm_SNP: Rocket_04_SNP_F
 	{
 		model = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";
 		proxyShape = "\A3\Weapons_F\Ammo\Rocket_02_fly_F";

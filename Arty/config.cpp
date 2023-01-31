@@ -220,13 +220,14 @@ class CfgAmmo
 	class Sh_82mm_AMOS;
 	class Sh_155mm_WP: Cluster_155mm_AMOS
 	{
+		triggerDistance = 130;
 		submunitionAmmo[] = {"Sh_155mm_WP_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"randomcenter",1};
 	};
 	class Sh_82mm_WP: Sh_82mm_AMOS
 	{
-		triggerDistance = 150;
+		triggerDistance = 80;
 		submunitionAmmo[] = {"Sh_82mm_WP_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"randomcenter",1};
@@ -247,14 +248,12 @@ class CfgAmmo
 	};
 	class Sh_82mm_NP: Sh_82mm_AMOS
 	{
-		triggerDistance = 150;
 		submunitionAmmo[] = {"Sh_82mm_NP_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"randomcenter",1};
 	};
 	class R_230mm_NP: R_230mm_Cluster
 	{
-		triggerDistance = 150;
 		submunitionAmmo[] = {"R_230mm_NP_Mother",1};
 		submunitionConeAngle = 1;
 		submunitionConeType[] = {"randomcenter",1};

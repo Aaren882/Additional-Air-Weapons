@@ -12,11 +12,6 @@ class CfgPatches
 			"A3_Weapons_F_Exp_Launchers_RPG7"
 		};
 		requiredVersion=0.1;
-		author="Aaren ";
-		authors[]=
-		{
-			"Aaren"
-		};
 	};
 };
 class CfgWeapons
@@ -24,21 +19,21 @@ class CfgWeapons
 	class Launcher_Base_F;
 	class launch_RPG32_F: Launcher_Base_F
 	{
-		magazines[] = {"RPG32_F","RPG32_HE_F","RPG32_Cluster_F"};
+		magazines[] += {"RPG32_Cluster_F"};
 		magazineWell[] = {"RPG32"};
 	};
 	class launch_RPG7_F: Launcher_Base_F
 	{
-		magazines[] = {"RPG7_F","RPG7_Cluster_F"};
+		magazines[] += {"RPG7_Cluster_F"};
 		magazineWell[] = {"RPG7"};
 	};
 	class launch_MRAWS_base_F: Launcher_Base_F
 	{
-		magazines[] = {"MRAWS_HEAT_F","MRAWS_HE_F","MRAWS_HEAT55_F","MRAWS_Cluster_F"};
+		magazines[] += {"MRAWS_Cluster_F"};
 	};
 	class launch_RPG32_ghex_F: launch_RPG32_F
 	{
-		magazines[] = {"RPG32_F","RPG32_HE_F","RPG32_Cluster_F"};
+		magazines[] += {"RPG32_Cluster_F"};
 	};
 };
 class CfgVehicles
@@ -131,7 +126,7 @@ class CfgMagazineWells
 	};
 	class RPG7
 	{
-		BI_Magazines[] = {"RPG7_F","RPG7_Cluster_F"};
+		BI_Magazines[] += {"RPG7_Cluster_F"};
 	};
 };
 class CfgMagazines

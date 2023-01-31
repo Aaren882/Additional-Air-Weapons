@@ -209,7 +209,7 @@ class CfgAmmo
 		initTime = 2;
 		timeToLive = 30;
 		airFriction = -0.2;
-		effectsSmoke = "AWS_CM_Flare";
+		effectsSmoke = "AAW_CM_Flare";
 		deflecting = 30;
 	};
 };

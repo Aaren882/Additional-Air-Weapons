@@ -28,7 +28,7 @@ class CfgAmmo
 		explosionSoundEffect = "";
 		
 		deflectionSlowDown = 0;
-		explosionTime = 0.08;
+		explosionTime = 0.01;
 		
 		SoundSetExplosion[]=
 		{
@@ -64,13 +64,6 @@ class CfgAmmo
 	class BM_Cluster_WP: RK_Cluster_WP
 	{
 		airFriction = 3;
-	};
-	class RK_Cluster_FG: BulletBase
-	{
-		hit = 15;
-		indirectHit = 20;
-		indirectHitRange = 0.1;
-		caliber = 4;
 	};
 	/////////////////////////SFW Main Base/////////////////////////////////
 	class BombCluster_01_PH_F: Bomb_04_F

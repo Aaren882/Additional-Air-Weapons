@@ -92,24 +92,42 @@ class Plane_CAS_01_dynamicLoadout_base_F: Plane_CAS_01_base_F
 						"B_USAF_AIM9M",
 						"B_AIM9M_DUAL_RAIL",
 						"B_AIM9X_DUAL_RAIL",
-						"B_BOMB_2GBU12_BRU57",//Bomb
-						"B_BOMB_2GBU38",
-						"B_BOMB_2GBU49",
-						"B_BOMB_2GBU54",
+						"B_BOMB_GBU12",//Bomb
 						"B_BOMB_2GBU12",
 						"B_BOMB_3GBU12",
+						"B_BOMB_GBU24",
+						"B_BOMB_GBU28",
+						"B_BOMB_GBU31",
+						"B_BOMB_GBU32",
+						"B_BOMB_GBU38",
+						"B_BOMB_GBU39",
+						"B_BOMB_GBU49",
+						"B_BOMB_GBU54",
+						"B_BOMB_GBU53",
+						"B_BOMB_CBU87",
 						"B_BOMB_2CBU87_BRU_42",
 						"B_BOMB_3CBU87",
+						"B_BOMB_CBU89",
 						"B_BOMB_2CBU89_BRU_42",
 						"B_BOMB_3CBU89",
+						"B_BOMB_CBU97",
 						"B_BOMB_3CBU97",
+						"B_BOMB_CBU103",
 						"B_BOMB_3CBU103",
+						"B_BOMB_CBU104",
 						"B_BOMB_3CBU104",
+						"B_BOMB_CBU105",
 						"B_BOMB_3CBU105",
+						"B_BOMB_MK20",
 						"B_BOMB_2MK20_BRU_42",
 						"B_BOMB_3MK20",
+						"B_BOMB_MK77",
+						"B_BOMB_MK82",
 						"B_BOMB_3MK82",
-						"B_BOMB_3MK82SE"
+						"B_BOMB_MK82SE",
+						"B_BOMB_3MK82SE",
+						"B_BOMB_MK84",
+						"B_BOMB_MK84AIR"
 					};
 				};
 				class Pylons4: Pylons1
@@ -136,24 +154,42 @@ class Plane_CAS_01_dynamicLoadout_base_F: Plane_CAS_01_base_F
 						"B_USAF_AIM9M",
 						"B_AIM9M_DUAL_RAIL",
 						"B_AIM9X_DUAL_RAIL",
-						"B_BOMB_2GBU12_BRU57",//Bomb
-						"B_BOMB_2GBU38",
-						"B_BOMB_2GBU49",
-						"B_BOMB_2GBU54",
+						"B_BOMB_GBU12",//Bomb
 						"B_BOMB_2GBU12",
 						"B_BOMB_3GBU12",
+						"B_BOMB_GBU24",
+						"B_BOMB_GBU28",
+						"B_BOMB_GBU31",
+						"B_BOMB_GBU32",
+						"B_BOMB_GBU38",
+						"B_BOMB_GBU39",
+						"B_BOMB_GBU49",
+						"B_BOMB_GBU54",
+						"B_BOMB_GBU53",
+						"B_BOMB_CBU87",
 						"B_BOMB_2CBU87_BRU_42",
 						"B_BOMB_3CBU87",
+						"B_BOMB_CBU89",
 						"B_BOMB_2CBU89_BRU_42",
 						"B_BOMB_3CBU89",
+						"B_BOMB_CBU97",
 						"B_BOMB_3CBU97",
+						"B_BOMB_CBU103",
 						"B_BOMB_3CBU103",
+						"B_BOMB_CBU104",
 						"B_BOMB_3CBU104",
+						"B_BOMB_CBU105",
 						"B_BOMB_3CBU105",
+						"B_BOMB_MK20",
 						"B_BOMB_2MK20_BRU_42",
 						"B_BOMB_3MK20",
+						"B_BOMB_MK77",
+						"B_BOMB_MK82",
 						"B_BOMB_3MK82",
-						"B_BOMB_3MK82SE"
+						"B_BOMB_MK82SE",
+						"B_BOMB_3MK82SE",
+						"B_BOMB_MK84",
+						"B_BOMB_MK84AIR"
 					};
 				};
 				class Pylons5: Pylons1
@@ -180,30 +216,51 @@ class Plane_CAS_01_dynamicLoadout_base_F: Plane_CAS_01_base_F
 						"B_USAF_AIM9M",
 						"B_AIM9M_DUAL_RAIL",
 						"B_AIM9X_DUAL_RAIL",
-						"B_BOMB_2GBU12_BRU57",//Bomb
-						"B_BOMB_2GBU38",
-						"B_BOMB_2GBU49",
-						"B_BOMB_2GBU54",
+						"B_BOMB_GBU12",//Bomb
 						"B_BOMB_2GBU12",
 						"B_BOMB_3GBU12",
+						"B_BOMB_GBU24",
+						"B_BOMB_GBU28",
+						"B_BOMB_GBU31",
+						"B_BOMB_GBU32",
+						"B_BOMB_GBU38",
+						"B_BOMB_GBU39",
+						"B_BOMB_GBU49",
+						"B_BOMB_GBU54",
+						"B_BOMB_GBU53",
+						"B_BOMB_CBU87",
 						"B_BOMB_2CBU87_BRU_42",
 						"B_BOMB_3CBU87",
+						"B_BOMB_CBU89",
 						"B_BOMB_2CBU89_BRU_42",
 						"B_BOMB_3CBU89",
+						"B_BOMB_CBU97",
 						"B_BOMB_3CBU97",
+						"B_BOMB_CBU103",
 						"B_BOMB_3CBU103",
+						"B_BOMB_CBU104",
 						"B_BOMB_3CBU104",
+						"B_BOMB_CBU105",
 						"B_BOMB_3CBU105",
+						"B_BOMB_MK20",
 						"B_BOMB_2MK20_BRU_42",
 						"B_BOMB_3MK20",
+						"B_BOMB_MK77",
+						"B_BOMB_MK82",
 						"B_BOMB_3MK82",
-						"B_BOMB_3MK82SE"
+						"B_BOMB_MK82SE",
+						"B_BOMB_3MK82SE",
+						"B_BOMB_MK84",
+						"B_BOMB_MK84AIR"
 					};
 				};
 				class Pylons6: Pylons5{};
 				class Pylons7: Pylons4{};
 				class Pylons8: Pylons3{};
-				class Pylons9: Pylons2{};
+				class Pylons9: Pylons2
+				{
+					attachment = "PylonRack_7Rnd_Rocket_04_AP_F";
+				};
 				class Pylons10: Pylons1{};
 			};
 		};
