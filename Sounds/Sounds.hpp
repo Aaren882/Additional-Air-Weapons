@@ -146,7 +146,7 @@ class CfgSoundShaders
 			}
 		};
 		volume=5;
-		range=200;
+		range=500;
 		rangeCurve[]=
 		{
 			{0,1},
